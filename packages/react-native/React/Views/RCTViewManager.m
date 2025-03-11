@@ -424,28 +424,22 @@ RCT_CUSTOM_VIEW_PROPERTY(collapsableChildren, BOOL, RCTView)
   // filtered by view configs.
 }
 
-RCT_CUSTOM_VIEW_PROPERTY(experimental_layoutConformance, NSString *, RCTView)
+typedef NSArray *FilterArray; // Custom type to make the StaticViewConfigValidator Happy
+RCT_CUSTOM_VIEW_PROPERTY(filter, FilterArray, RCTView)
 {
-  // Property is only to be used in the new renderer.
-  // It is necessary to add it here, otherwise it gets
-  // filtered by view configs.
+  //   Property is only to be used in the new renderer.
+  //   It is necessary to add it here, otherwise it gets
+  //   filtered by view configs.
+}
+typedef NSArray *BoxShadowArray; // Custom type to make the StaticViewConfigValidator Happy
+RCT_CUSTOM_VIEW_PROPERTY(boxShadow, BoxShadowArray, RCTView)
+{
+  //   Property is only to be used in the new renderer.
+  //   It is necessary to add it here, otherwise it gets
+  //   filtered by view configs.
 }
 
-RCT_CUSTOM_VIEW_PROPERTY(filter, NSArray *, RCTView)
-{
-  // Property is only to be used in the new renderer.
-  // It is necessary to add it here, otherwise it gets
-  // filtered by view configs.
-}
-
-RCT_CUSTOM_VIEW_PROPERTY(boxShadow, NSArray *, RCTView)
-{
-  // Property is only to be used in the new renderer.
-  // It is necessary to add it here, otherwise it gets
-  // filtered by view configs.
-}
-
-RCT_CUSTOM_VIEW_PROPERTY(experimental_mixBlendMode, NSString *, RCTView)
+RCT_CUSTOM_VIEW_PROPERTY(mixBlendMode, NSString *, RCTView)
 {
   // Property is only to be used in the new renderer.
   // It is necessary to add it here, otherwise it gets
